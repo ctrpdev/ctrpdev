@@ -1,0 +1,38 @@
+{
+    "HomePage": {
+        "hello": "Hola, soy",
+        "welcome": "Bienvenid@ a mi portafolio",
+        "mySelf": "Soy un desarrollador con experiencia en web y un gran interés en expandir mis conocimientos hacia el desarrollo móvil.",
+        "thisSite": "Construí este portafolio minimalista desde cero para darme a conocer."
+    },
+    "ContactPage": {
+        "title": "Contactar",
+        "formTitle": "Envíame un mensaje",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "submit": "Enviar",
+        "close": "Cerrar",
+        "hideMessage": "Si estás interesado en colaborar en un proyecto, tienes una idea emocionante que quieres desarrollar, o simplemente quieres decir 'hola', ¡me encantaría saber de ti! Como desarrollador, estoy siempre abierto a nuevas oportunidades y desafíos.",
+        "success": "El mensaje ha sido enviado y me pondré en contacto lo antes posible",
+        "error": "Ocurrió un error. Por favor inténtelo más tarde",
+        "validation": "Por favor complete este campo",
+        "invalidMail": "Por favor ingrese un correo válido",
+        "sending": "Enviando..."
+    },
+    "ProjectsPage": {
+        "title": "Proyectos",
+        "visit": "Visitar"
+    },
+    "AboutPage": {
+            "title": "Acerca de mí",
+            "agileTitle": "Desarrollo ágil",
+            "agile": "Experiencia en desarrollo ágil con Scrum, aplicación de buenas prácticas y enfoques de QA para garantizar la calidad en los proyectos.",
+            "teamworkTitle": "Trabajo en equipo",
+            "teamwork": "Colaboro de manera efectiva en equipos multidisciplinarios, siempre buscando alcanzar los objetivos establecidos y promoviendo una mejora continua tanto a nivel personal como colectivo.",
+            "listeningTitle": "Escucha activa",
+            "listening": "Además de ser desarrollador, soy un psicólogo con sólida experiencia y capacidad de escucha activa y resolución de conflictos. Mis habilidades blandas facilitan la comunicación efectiva y la exposición de ideas, fomentando un entendimiento profundo entre los miembros del equipo.",
+            "creativeTitle": "Creativo",
+            "creative": "La música es una de mis pasiones, y me dedico a actividades creativas que me ayudan a relajarme y estimulan mi innovación en el trabajo."
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "HomePage": {
+        "hello": "Hello, I am",
+        "welcome": "Welcome to my portfolio",
+        "mySelf": "I am a developer with experience in web development and a strong interest in expanding my knowledge into mobile development.",
+        "thisSite": "I built this minimalist portfolio from scratch to introduce myself."
+    },
+    "ContactPage": {
+        "title": "Contact",
+        "formTitle": "Send me a message",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Submit",
+        "close": "Close",
+        "hideMessage": "If you're interested in collaborating on a project, have an exciting idea you want to develop, or just want to say 'hello,' I'd love to hear from you! As a developer, I'm always open to new opportunities and challenges.",
+        "success": "The message has been sent and I'll contact you as soon as possible",
+        "error": "An error has occurred. Please try later",
+        "validation": "Please complete this field",
+        "invalidMail": "Please enter a valid email address",
+        "sending": "Sending..."
+    },
+    "ProjectsPage": {
+        "title": "Projects",
+        "visit": "Visit"
+    },
+    "AboutPage": {
+        "title": "About Me",
+        "agileTitle": "Agile Development",
+        "agile": "Experience in agile development with Scrum, applying best practices and QA approaches to ensure quality in projects.",
+        "teamworkTitle": "Teamwork",
+        "teamwork": "I collaborate effectively in multidisciplinary teams, always striving to achieve established objectives and promoting continuous improvement both personally and collectively.",
+        "listeningTitle": "Active Listening",
+        "listening": "In addition to being a developer, I am a psychologist with solid experience and skills in active listening and conflict resolution. My soft skills facilitate effective communication and the presentation of ideas, fostering a deep understanding among team members.",
+        "creativeTitle": "Creative",
+        "creative": "Music is one of my passions, and I engage in creative activities that help me relax and stimulate my innovation at work."
+    }    
+}
