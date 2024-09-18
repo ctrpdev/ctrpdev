@@ -106,7 +106,8 @@ export default function Contact() {
                 2xl:px-12
                 mt-12 justify-center">
                 <h1 className="hidden xl:block lg:text-2xl text-center select-none">{t("formTitle")}</h1>
-                <div className="mb-3 flex flex-col min-h-8 max-h-8">
+                <div className="flex flex-col gap-10">
+                                  <div className="mb-3 flex flex-col min-h-8 max-h-8">
                   <label htmlFor="name" className="text-neutral-600 select-none">{t("name")}</label>
                   <Field id="name" name="name" placeholder="John" className={`${styleInput}`} />
                   <ErrorMessage name="name" component="div" className="select-none text-rose-600 text-xs" />
@@ -124,22 +125,25 @@ export default function Contact() {
                   <ErrorMessage name="email" component="div" className="select-none text-rose-600 text-xs" />
                 </div>
 
-                <div className="mb-3 flex flex-col min-h-8 max-h-8">
+                <div className="mb-3 flex flex-col min-h-14 max-h-14">
                   <label htmlFor="content" className="text-neutral-600 select-none">{t("message")}</label>
                   <Field id="content" name="content" as="textarea" placeholder={"message"} className={`${styleInput} rounded-xl resize-none`} />
                   <ErrorMessage name="content" component="div" className="select-none text-rose-600 text-xs" />
                 </div>
 
+                <div className="mb-3 flex flex-col">
                 <button
                   type="submit"
                   disabled={!isValid || !dirty || isSubmitting}
                   className={`my-10 rounded-full p-3 self-center transition-all w-56
-            ${!isValid || !dirty || isSubmitting ? "bg-gray-300 text-neutral-600"
+                    ${!isValid || !dirty || isSubmitting ? "bg-gray-300 text-neutral-600"
                       : "bg-orange-500 cursor-pointer text-white hover:shadow-xl hover:bg-rose-600 transition-all duration-500 ease-in-out"} 
-                ${isSubmitting ? "bg-rose-500 animate-pulse text-white" : ""}`}
-                >
+                      ${isSubmitting ? "bg-rose-500 animate-pulse text-white" : ""}`}
+                      >
                   {isSubmitting ? t("sending") : t("submit")}
                 </button>
+                  </div>
+                </div>
               </Form>
             )}
           </Formik>

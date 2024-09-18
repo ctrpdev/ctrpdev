@@ -3,8 +3,6 @@
 import { useRouter, usePathname } from '@/navigation';
 import { useLocale } from 'next-intl';
 
-
-
 export default function LocaleSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
@@ -18,12 +16,12 @@ export default function LocaleSwitcher() {
     }
   };
 
-
     return (
         <div className="right-3 top-3 fixed fade-in z-50">
-            <button type="button" 
+           <button type="button" 
             onClick={handleChange}
-            className="p-3 rounded-full border border-white/20 hover:border-transparent hover:shadow-lg backdrop-blur-lg hover:bg-gray-100/20 transition-all duration-500 text-gray-100 hover:text-white"
+            className="flex justify-evenly items-center p-3
+            rounded-full hover:shadow-2xl backdrop-blur-lg bg-gray-900/40 transition-all duration-500 text-gray-100"
             >{currentLocale.toLocaleUpperCase()}</button>
         </div>
     )

@@ -38,5 +38,11 @@
             "listening": "Además de ser desarrollador, soy un psicólogo con sólida experiencia y capacidad de escucha activa y resolución de conflictos. Mis habilidades blandas facilitan la comunicación efectiva y la exposición de ideas, fomentando un entendimiento profundo entre los miembros del equipo.",
             "creativeTitle": "Creativo",
             "creative": "La música es una de mis pasiones, y me dedico a actividades creativas que me ayudan a relajarme y estimulan mi innovación en el trabajo."
+    },
+    "DockMenu": {
+        "home": "Home",
+        "projects": "Proyectos",
+        "about": "Acerca de mí",
+        "contact": "Contáctame"
     }
 }

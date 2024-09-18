@@ -38,5 +38,11 @@
         "listening": "In addition to being a developer, I am a psychologist with solid experience and skills in active listening and conflict resolution. My soft skills facilitate effective communication and the presentation of ideas, fostering a deep understanding among team members.",
         "creativeTitle": "Creative",
         "creative": "Music is one of my passions, and I engage in creative activities that help me relax and stimulate my innovation at work."
-    }    
+    },
+    "DockMenu": {
+        "home": "Home",
+        "projects": "Projects",
+        "about": "About me",
+        "contact": "Conact me"
+    }
 }

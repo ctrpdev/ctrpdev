@@ -8,24 +8,32 @@ import teamwork from "@/assets/img/teamwork.jpg";
 import creative from "@/assets/img/creative.jpg";
 import Image from "next/image";
 
+const colors = [
+  "bg-slate-200",
+  "bg-purple-900",
+  "bg-sky-500",
+  "bg-red-600",
+  "bg-amber-500",
+];
+
 export default function About() {
   const [isMouseHover, setIsMouseHover] = useState(false);
-  const [isMouseHover1, setIsMouseHover1] = useState(false);
-  const [isMouseHover2, setIsMouseHover2] = useState(false);
-  const [isMouseHover3, setIsMouseHover3] = useState(false);
-  const [isMouseHover4, setIsMouseHover4] = useState(false);
+  const [hoverIndex, setHoverIndex] = useState(0);
   const t = useTranslations("AboutPage");
 
+  const handleOver = (index: number) => {
+    setIsMouseHover(true);
+    setHoverIndex(index)
+  }
+
   return (
-    <main className={`${isMouseHover ? "bg-slate-200" : "bg-lime-700"} 
-    ${isMouseHover1 ? "bg-purple-950" : "bg-lime-700"}
-    ${isMouseHover2 ? "bg-sky-400" : "bg-lime-700"}
-    ${isMouseHover3 ? "bg-red-500" : "bg-lime-700"}
-    ${isMouseHover4 ? "bg-amber-400" : "bg-lime-700"}
+    <main className={`${isMouseHover ? colors[hoverIndex] : "bg-lime-700"} 
+
         w-screen h-full p-14 lg:relative lg:place-content-center lg:place-items-center lg:h-screen
         grid roboto
         transition-all duration-500 ease-in-out
-        `}>
+        `}
+        >
       <h1 className={`text-gray-100
             text-2xl font-semibold mb-10 lg:absolute lg:animate-pulse
             xl:text-center xl:text-5xl
@@ -33,19 +41,18 @@ export default function About() {
             ${isMouseHover ? "lg:hidden" : "visible"}
             `}
         onTouchStart={() => setIsMouseHover(true)}
-        onMouseOver={() => setIsMouseHover(true)}
+        onMouseOver={()=>handleOver(0)}
       >
         {t("title")}
       </h1>
-      <div className={`mb-16 grid gap-5 lg:grid-cols-2 lg:grid-rows-2 ${isMouseHover ? "lg:absolute lg:inset-0 lg:p-14" : "lg:hidden"}`}>
+      <div className={`mb-16 grid gap-5 lg:grid-cols-2 lg:grid-rows-2 ${isMouseHover ? "lg:absolute lg:inset-0 lg:p-14 xl:p-24 2xl:p-44" : "lg:hidden"}`}>
 
         <section className={`fade-in-left bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:-rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
-              onTouchStart={() => setIsMouseHover1(true)}
-              onMouseOver={() => setIsMouseHover1(true)}
-              onTouchEnd={() => setIsMouseHover1(false)}
-              onMouseOut={() => setIsMouseHover1(false)}
+              onTouchStart={() => setIsMouseHover(true)}
+              onMouseOver={()=>handleOver(1)}
+              onMouseOut={()=>handleOver(0)}
               >
           <div className="md:grid md:grid-cols-2 md:gap-4 place-content-center place-items-center">
             <article className="text-justify md:text-end">
@@ -61,10 +68,9 @@ export default function About() {
         <section className={`fade-in-down bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
-              onTouchStart={() => setIsMouseHover2(true)}
-              onMouseOver={() => setIsMouseHover2(true)}
-              onTouchEnd={() => setIsMouseHover2(false)}
-              onMouseOut={() => setIsMouseHover2(false)}
+              onTouchStart={() => setIsMouseHover(true)}
+              onMouseOver={()=>handleOver(2)}
+              onMouseOut={()=>handleOver(0)}
               >
           <div className="md:grid md:grid-cols-2 md:gap-4 place-content-center place-items-center">
             <div className="hidden md:flex items-center justify-center">
@@ -80,10 +86,9 @@ export default function About() {
         <section className={`fade-in-up bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:-rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
-              onTouchStart={() => setIsMouseHover3(true)}
-              onMouseOver={() => setIsMouseHover3(true)}
-              onTouchEnd={() => setIsMouseHover3(false)}
-              onMouseOut={() => setIsMouseHover3(false)}
+              onTouchStart={() => setIsMouseHover(true)}
+              onMouseOver={()=>handleOver(3)}
+              onMouseOut={()=>handleOver(0)}
               >
           <div className="md:grid md:grid-cols-2 md:gap-4 place-content-center place-items-center">
             <article className="text-justify md:text-end">
@@ -99,10 +104,9 @@ export default function About() {
         <section className={`fade-in-right bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
-              onTouchStart={() => setIsMouseHover4(true)}
-              onMouseOver={() => setIsMouseHover4(true)}
-              onTouchEnd={() => setIsMouseHover4(false)}
-              onMouseOut={() => setIsMouseHover4(false)}
+              onTouchStart={() => setIsMouseHover(true)}
+              onMouseOver={()=>handleOver(4)}
+              onMouseOut={()=>handleOver(0)}
               >
           <div className="md:grid md:grid-cols-2 md:gap-4 place-content-center place-items-center">
             <div className="hidden md:flex items-center justify-start">
