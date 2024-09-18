@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { ProjectAPI } from "@/api/projectAPI";
 import { useMutation } from "@tanstack/react-query";
-import "./style.css"
 import { useTranslations } from 'next-intl';
 import * as Yup from 'yup';
 import { Modal } from "@/components/Modal";
@@ -41,8 +40,8 @@ export default function Contact() {
 
   return (
     <main className={`${isMouseHover ? "bg-orange-500" : "bg-rose-600"} 
-        w-screen h-screen p-14 roboto
-        grid
+        w-screen min-h-screen max-h-[100vh] p-14 roboto
+        grid overflow-y-auto
         transition-all duration-500 ease-in-out
         `}>
 
