@@ -17,11 +17,11 @@ export default function About() {
   const t = useTranslations("AboutPage");
 
   return (
-    <main className={`${isMouseHover ? "bg-sky-700" : "bg-lime-700"} 
-    ${isMouseHover1 ? "bg-purple-900" : "bg-lime-700"}
-    ${isMouseHover2 ? "bg-sky-500" : "bg-lime-700"}
-    ${isMouseHover3 ? "bg-slate-300" : "bg-lime-700"}
-    ${isMouseHover4 ? "bg-amber-500" : "bg-lime-700"}
+    <main className={`${isMouseHover ? "bg-slate-200" : "bg-lime-700"} 
+    ${isMouseHover1 ? "bg-purple-950" : "bg-lime-700"}
+    ${isMouseHover2 ? "bg-sky-400" : "bg-lime-700"}
+    ${isMouseHover3 ? "bg-red-500" : "bg-lime-700"}
+    ${isMouseHover4 ? "bg-amber-400" : "bg-lime-700"}
         w-screen h-full p-14 lg:relative lg:place-content-center lg:place-items-center lg:h-screen
         grid roboto
         transition-all duration-500 ease-in-out
@@ -39,7 +39,7 @@ export default function About() {
       </h1>
       <div className={`mb-16 grid gap-5 lg:grid-cols-2 lg:grid-rows-2 ${isMouseHover ? "lg:absolute lg:inset-0 lg:p-14" : "lg:hidden"}`}>
 
-        <section className={`fade-in-left bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl hover:shadow-xl hover:-rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
+        <section className={`fade-in-left bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:-rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
               onTouchStart={() => setIsMouseHover1(true)}
@@ -58,7 +58,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className={`fade-in-down bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl hover:shadow-xl hover:rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
+        <section className={`fade-in-down bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
               onTouchStart={() => setIsMouseHover2(true)}
@@ -77,7 +77,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className={`fade-in-up bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl hover:shadow-xl hover:-rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
+        <section className={`fade-in-up bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:-rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
               onTouchStart={() => setIsMouseHover3(true)}
@@ -96,7 +96,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className={`fade-in-right bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl hover:shadow-xl hover:rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
+        <section className={`fade-in-right bg-gray-100 p-10 md:p-24 lg:p-3 rounded-2xl shadow-xl hover:rotate-2 hover:scale-110 transition-all duration-500 ease-in-out hover:z-50
               grid place-content-center
               `}
               onTouchStart={() => setIsMouseHover4(true)}
