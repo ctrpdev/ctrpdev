@@ -8,12 +8,20 @@ type Values = {
     content: string;
 }
 
+type ApiProject = {
+    title: string;
+    description: { [locale: string]: string }; // Asumiendo que la descripción tiene soporte para locales
+    url: string;
+    technologies: string[];
+    images: string[];
+};
+
 export class ProjectAPI {
-    static async getProjects(): Promise<Array<{ id: string } & DocumentData>> {
+    static async getProjects(): Promise<ApiProject[]> {
         const response = await getDocs(query(collection(FirebaseApp.db, "projects")));
         return response.docs.map((doc) => ({
             id: doc.id,
-            ...doc.data()
+            ...doc.data() as ApiProject
         }));
     }
 

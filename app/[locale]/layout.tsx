@@ -7,8 +7,17 @@ import { TanstackProvider } from "@/lib/providers/TanstackProvider"
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-export const prostoOne = Prosto_One({ subsets: ["latin"], weight: ["400"] });
-export const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
+export const roboto_init = Roboto({
+  subsets: ['latin'], 
+  weight: ['100', '400', '500', '700'],
+  variable: '--font-roboto',
+});
+
+export const prosto_one_init = Prosto_One({ 
+  subsets: ["latin"], 
+  weight: ["400"] ,
+  variable: "--font-prosto_one",
+});
 
 export const metadata: Metadata = {
   title: "ctrpdev's Portfolio",
@@ -27,7 +36,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${roboto.className} antialiased`}
+        className={`${roboto_init.variable} ${prosto_one_init.variable}`}
       >
         <NextIntlClientProvider messages={messages}>
           <LocaleSwitcher />

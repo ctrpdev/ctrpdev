@@ -15,7 +15,7 @@ export default function About() {
   return (
     <main className={`${isMouseHover ? "bg-sky-700" : "bg-lime-700"} 
         w-screen h-full p-14 lg:relative lg:place-content-center lg:place-items-center lg:h-screen
-        grid
+        grid roboto
         transition-all duration-500 ease-in-out
         `}>
       <h1 className={`text-gray-100

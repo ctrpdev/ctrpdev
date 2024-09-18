@@ -10,6 +10,14 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocale } from 'next-intl';
 import Skeleton from "@/components/Skeleton";
 
+type ApiProject = {
+  title: string;
+  description: { [locale: string]: string }; // Asumiendo que la descripción tiene soporte para locales
+  url: string;
+  technologies: string[];
+  images: string[];
+};
+
 export default function Projects() {
   const t = useTranslations("ProjectsPage");
   const [isMouseHover, setIsMouseHover] = useState(false);
@@ -18,7 +26,7 @@ export default function Projects() {
   const locale = useLocale()
   const sliderRef = useRef<HTMLDivElement | null>(null);
 
-  const { data: projects, isFetching } = useQuery({
+  const { data: projects, isFetching } = useQuery<ApiProject[]>({
     queryKey: ["projects"],
     queryFn: () => ProjectAPI.getProjects(),
     refetchOnMount: false,
@@ -44,7 +52,7 @@ export default function Projects() {
   }, []);
   return (
     <main className={`${isMouseHover ? "bg-gray-100" : "bg-indigo-700"} 
-        w-full xl:h-screen p-14
+        w-full xl:h-screen p-14 roboto
         xl:grid xl:grid-cols-3
         xl:justify-center xl:items-center
         transition-all duration-500 ease-in-out
@@ -91,7 +99,6 @@ export default function Projects() {
           {
             projects?.map((project: any) => (
               <CardProject
-                id={project.id}
                 key={project.id}
                 title={project.title}
                 description={project.description[locale]}

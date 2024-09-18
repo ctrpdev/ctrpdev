@@ -41,7 +41,7 @@ export default function Contact() {
 
   return (
     <main className={`${isMouseHover ? "bg-orange-500" : "bg-rose-600"} 
-        w-screen h-screen p-14
+        w-screen h-screen p-14 roboto
         grid
         transition-all duration-500 ease-in-out
         `}>

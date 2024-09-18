@@ -7,7 +7,6 @@ import {useTranslations} from 'next-intl';
 import { useState } from "react";
 
 type CardProjectProps = {
-    id: string;
     title: string;
     description: string;
     url: string;
@@ -15,7 +14,7 @@ type CardProjectProps = {
     images: string[];
 }
 
-export default function CardProject({ id, title, description, url, technologies, images }: CardProjectProps) {
+export default function CardProject({ title, description, url, technologies, images }: CardProjectProps) {
     const t = useTranslations("ProjectsPage");
     const [isMouseHover, setIsMouseHover] = useState(false);
     return (

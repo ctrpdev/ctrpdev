@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.roboto {
+  font-family: var(--font-roboto);
+}
+
+.prosto_one {
+  font-family: var(--font-prosto_one);
+}
+
 /* Animaciones CSS */
 
 /* 1. Desvanecimiento en Entrada */
