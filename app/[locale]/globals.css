@@ -290,3 +290,22 @@
 .bounce {
   animation: bounce 2s ease infinite;
 }
+
+@keyframes spinAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.spinning {
+  animation: spinAndScale 2s ease-in-out;
+  transform-origin: center;
+  filter: drop-shadow(0px 0px 5px rgba(0, 236, 194, 0.8));
+  transition: ease-in-out 500ms;
+}

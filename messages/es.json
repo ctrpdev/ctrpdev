@@ -1,9 +1,13 @@
 {
     "HomePage": {
         "hello": "Hola, soy",
+        "helloHidden": "",
         "welcome": "Bienvenid@ a mi portafolio",
+        "welcomeHidden": "",
         "mySelf": "Soy un desarrollador con experiencia en web y un gran interés en expandir mis conocimientos hacia el desarrollo móvil.",
-        "thisSite": "Construí este portafolio minimalista desde cero para darme a conocer."
+        "mySelfHidden": "Este sitio fue construido utilizando Axios, Firebase, Formik, NextJS, Next-intl, Nodemailer y TanStack Query",
+        "thisSite": "Construí este portafolio minimalista desde cero para darme a conocer.",
+        "thisSiteHidden": "Busqué inspiración en los colores que utilizaba Windows 8 y en Material Design."
     },
     "ContactPage": {
         "title": "Contactar",
