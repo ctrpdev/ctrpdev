@@ -20,7 +20,7 @@ export default function CardProject({ title, description, url, technologies, ima
     const [isMouseHover, setIsMouseHover] = useState(false);
     return (
         <div className={`sm:w-full max-w-64 min-w-64 max-h-96 min-h-96 rounded-2xl md:rounded-3xl overflow-hidden hover:shadow-2xl transition-all ease-in-out duration-500
-            z-20 flex flex-col justify-between hover:z-30 hover:scale-105 hover:rotate-1 hover:-translate-y-5 blur-0`}
+            z-20 flex flex-col justify-between hover:z-30 hover:scale-105 hover:rotate-1 hover:-translate-y-5 blur-0 bg-gray-100`}
             onMouseOver={()=>setIsMouseHover(true)}
             onMouseOut={()=>setIsMouseHover(false)}
             >
