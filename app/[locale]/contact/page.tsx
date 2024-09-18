@@ -99,13 +99,13 @@ export default function Contact() {
           >
             {({ isValid, dirty }) => (
               <Form className="flex flex-col gap-12 w-full 
-        p-3
-        text-sm
-        sm:p-12
-        xl:px-0
-        2xl:px-12
-        mt-12 h-full justify-center">
-                <h1 className="hidden xl:block lg:text-2xl text-center mb-10 select-none">{t("formTitle")}</h1>
+                p-3
+                text-sm
+                sm:p-12
+                xl:px-0
+                2xl:px-12
+                mt-12 justify-center">
+                <h1 className="hidden xl:block lg:text-2xl text-center select-none">{t("formTitle")}</h1>
                 <div className="mb-3 flex flex-col min-h-8 max-h-8">
                   <label htmlFor="name" className="text-neutral-600 select-none">{t("name")}</label>
                   <Field id="name" name="name" placeholder="John" className={`${styleInput}`} />
@@ -133,7 +133,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={!isValid || !dirty || isSubmitting}
-                  className={`mt-10 rounded-full p-3 self-center transition-all w-56
+                  className={`my-10 rounded-full p-3 self-center transition-all w-56
             ${!isValid || !dirty || isSubmitting ? "bg-gray-300 text-neutral-600"
                       : "bg-orange-500 cursor-pointer text-white hover:shadow-xl hover:bg-rose-600 transition-all duration-500 ease-in-out"} 
                 ${isSubmitting ? "bg-rose-500 animate-pulse text-white" : ""}`}

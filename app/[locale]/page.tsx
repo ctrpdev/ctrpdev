@@ -10,9 +10,9 @@ export default function Home() {
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   return (
-    <main className="bg-cyan-700 w-screen h-screen grid justify-center items-center roboto
-    p-14
-    ">
+    <main className={`${isMouseOver ? "bg-cyan-800" : "bg-cyan-700"} w-screen h-screen grid justify-center items-center roboto
+    p-14 transition-all duration-500 ease-in-out
+    `}>
       <div className="lg:grid lg:grid-cols-2 2xl:p-44 slide-down">
         <Image src={logo} alt="logo"
           className={`mx-auto ${isMouseOver ? "spinning" : ""} transition-all duration-500`}
