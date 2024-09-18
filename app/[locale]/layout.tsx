@@ -7,13 +7,13 @@ import { TanstackProvider } from "@/lib/providers/TanstackProvider"
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-export const roboto_init = Roboto({
+const roboto_init = Roboto({
   subsets: ['latin'], 
   weight: ['100', '400', '500', '700'],
   variable: '--font-roboto',
 });
 
-export const prosto_one_init = Prosto_One({ 
+const prosto_one_init = Prosto_One({ 
   subsets: ["latin"], 
   weight: ["400"] ,
   variable: "--font-prosto_one",

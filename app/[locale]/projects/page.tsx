@@ -11,19 +11,22 @@ import { useLocale } from 'next-intl';
 import Skeleton from "@/components/Skeleton";
 
 type ApiProject = {
+  id?: string;
   title: string;
-  description: { [locale: string]: string }; // Asumiendo que la descripción tiene soporte para locales
+  description: Record<string, string>;
   url: string;
   technologies: string[];
   images: string[];
 };
+
+type Locale = 'en' | 'es';
 
 export default function Projects() {
   const t = useTranslations("ProjectsPage");
   const [isMouseHover, setIsMouseHover] = useState(false);
   const [isMouseHoverButtonL, setIsMouseHoverButtonL] = useState(false);
   const [isMouseHoverButtonR, setIsMouseHoverButtonR] = useState(false);
-  const locale = useLocale()
+  const locale = useLocale() as Locale;
   const sliderRef = useRef<HTMLDivElement | null>(null);
 
   const { data: projects, isFetching } = useQuery<ApiProject[]>({
@@ -97,7 +100,7 @@ export default function Projects() {
 
           }
           {
-            projects?.map((project: any) => (
+            projects?.map((project: ApiProject) => (
               <CardProject
                 key={project.id}
                 title={project.title}

@@ -9,8 +9,9 @@ type Values = {
 }
 
 type ApiProject = {
+    id?: string;
     title: string;
-    description: { [locale: string]: string }; // Asumiendo que la descripción tiene soporte para locales
+    description: Record<string, string>;
     url: string;
     technologies: string[];
     images: string[];
@@ -18,6 +19,12 @@ type ApiProject = {
 
 export class ProjectAPI {
     static async getProjects(): Promise<ApiProject[]> {
+        FirebaseApp.init();
+
+        if (!FirebaseApp.db) {
+            throw new Error("Firebase DB is not initialized");
+        }
+
         const response = await getDocs(query(collection(FirebaseApp.db, "projects")));
         return response.docs.map((doc) => ({
             id: doc.id,

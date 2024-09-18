@@ -5,6 +5,7 @@ import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import {useTranslations} from 'next-intl';
 import { useState } from "react";
+import Image from "next/image";
 
 type CardProjectProps = {
     title: string;
@@ -30,9 +31,15 @@ export default function CardProject({ title, description, url, technologies, ima
                         duration={1000}
                         scale={0.4}>
                             {
-                                images.map((each, index) => <img key={index} style={{ width: "auto", height: "168.9px", margin: "auto", borderRadius: "1rem" }} src={each} />)
+                                images.map((each, index) => <Image alt="project"
+                                    key={index}
+                                    src={each}
+                                    width={232}
+                                    height={169}
+                                    className="rounded-2xl" />
+                                )
                             }
-                        </Zoom>
+                            </Zoom>
                     </div>
                     <div className="font-bold text-sm text-center mt-2 text-gray-700 select-none h-7">
                         {title}

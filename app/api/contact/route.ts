@@ -3,18 +3,25 @@ import nodemailer from "nodemailer";
 
 const user = process.env.EMAIL;
 const pass = process.env.PASSWORD;
-const port = process.env.PORT;
+const port = Number(process.env.PORT);
 const service = process.env.SERVICE;
 const host = process.env.HOST;
 
 export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
-    
+
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: "Name, email, and message are required." },
+        { status: 400 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
-      service: service,
-      host: host,
-      port: port,
+      service,
+      host,
+      port,
       secure: true,
       auth: {
         user,
@@ -33,9 +40,13 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       { message: "Message sent successfully" },
-      { status: 200 },
+      { status: 200 }
     );
   } catch (error) {
-    return new NextResponse("Failed to send message.", { status: 500 })
+    console.error("Error sending email:", error);
+    return NextResponse.json(
+      { error: "Failed to send message." },
+      { status: 500 }
+    );
   }
 }
