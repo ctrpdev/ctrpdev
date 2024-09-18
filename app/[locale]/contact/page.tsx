@@ -99,7 +99,7 @@ export default function Contact() {
             }}
           >
             {({ isValid, dirty }) => (
-              <Form className="flex flex-col gap-2 w-full 
+              <Form className="flex flex-col gap-12 w-full 
         p-3
         text-sm
         sm:p-12
@@ -107,13 +107,13 @@ export default function Contact() {
         2xl:px-12
         mt-12 h-full justify-center">
                 <h1 className="hidden xl:block lg:text-2xl text-center mb-10 select-none">{t("formTitle")}</h1>
-                <div className="mb-3 flex flex-col">
+                <div className="mb-3 flex flex-col min-h-8 max-h-8">
                   <label htmlFor="name" className="text-neutral-600 select-none">{t("name")}</label>
                   <Field id="name" name="name" placeholder="John" className={`${styleInput}`} />
-                  <ErrorMessage name="name" component="div" className="error-message select-none" />
+                  <ErrorMessage name="name" component="div" className="select-none text-rose-600 text-xs" />
                 </div>
 
-                <div className="mb-3 flex flex-col">
+                <div className="mb-3 flex flex-col min-h-8 max-h-8">
                   <label htmlFor="email" className="text-neutral-600 select-none">{t("email")}</label>
                   <Field
                     id="email"
@@ -122,19 +122,19 @@ export default function Contact() {
                     type="email"
                     className={`${styleInput}`}
                   />
-                  <ErrorMessage name="email" component="div" className="error-message select-none" />
+                  <ErrorMessage name="email" component="div" className="select-none text-rose-600 text-xs" />
                 </div>
 
-                <div className="mb-3 flex flex-col">
+                <div className="mb-3 flex flex-col min-h-8 max-h-8">
                   <label htmlFor="content" className="text-neutral-600 select-none">{t("message")}</label>
                   <Field id="content" name="content" as="textarea" placeholder={"message"} className={`${styleInput} rounded-xl resize-none`} />
-                  <ErrorMessage name="content" component="div" className="error-message select-none" />
+                  <ErrorMessage name="content" component="div" className="select-none text-rose-600 text-xs" />
                 </div>
 
                 <button
                   type="submit"
                   disabled={!isValid || !dirty || isSubmitting}
-                  className={`mt-4 rounded-full p-3 self-center transition-all w-56
+                  className={`mt-10 rounded-full p-3 self-center transition-all w-56
             ${!isValid || !dirty || isSubmitting ? "bg-gray-300 text-neutral-600"
                       : "bg-orange-500 cursor-pointer text-white hover:shadow-xl hover:bg-rose-600 transition-all duration-500 ease-in-out"} 
                 ${isSubmitting ? "bg-rose-500 animate-pulse text-white" : ""}`}
