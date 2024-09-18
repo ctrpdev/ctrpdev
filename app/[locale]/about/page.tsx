@@ -35,9 +35,9 @@ export default function About() {
         `}
         >
       <h1 className={`text-gray-100
-            text-2xl font-semibold mb-10 lg:absolute lg:animate-pulse
+            text-2xl font-semibold mb-10 lg:absolute
             xl:text-center xl:text-5xl
-            transition-all duration-500 ease-in-out fade-in-up
+            transition-all duration-500 ease-in-out fade-in
             ${isMouseHover ? "lg:hidden" : "visible"}
             `}
         onTouchStart={() => setIsMouseHover(true)}
