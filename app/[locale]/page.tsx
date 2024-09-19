@@ -26,8 +26,6 @@ export default function Home() {
           <h1 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-7xl font-bold select-none">{isMouseOver ? "" : t("welcome")}</h1>
           <p className="text-sm lg:text-lg 2xl:text-2xl select-none">
             {isMouseOver ? t("mySelfHidden") : t("mySelf")}
-            <br />
-            {isMouseOver ? t("thisSiteHidden") : t("thisSite")}
           </p>
         </section>
       </div>

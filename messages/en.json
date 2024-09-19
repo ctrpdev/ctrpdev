@@ -2,11 +2,10 @@
     "HomePage": {
         "hello": "Hello, I am",
         "helloHidden": "",
-        "welcome": "Welcome to my portfolio",
+        "welcome": "Welcome to my minimalist portfolio!",
         "welcomeHidden": "",
         "mySelf": "I am a developer with experience in web and a strong interest in expanding my knowledge into mobile development.",
         "mySelfHidden": "This site was built using Axios, Firebase, Formik, NextJS, Next-intl, Nodemailer, and TanStack Query.",
-        "thisSite": "I built this minimalist portfolio from scratch to introduce myself.",
         "thisSiteHidden": "I drew inspiration from the colors used in Windows 8 and Material Design."
     },
     "ContactPage": {
