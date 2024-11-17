@@ -15,7 +15,7 @@ export default function Home() {
     `}>
       <div className="lg:grid lg:grid-cols-2 2xl:p-44 slide-down">
         <Image src={logo} alt="logo"
-          className={`mx-auto ${isMouseOver ? "spinning" : ""} transition-all duration-500`}
+          className={`mx-auto ${isMouseOver ? "spinning" : "animate-pulse"} transition-all duration-500`}
           onMouseOver={()=>setIsMouseOver(true)}
           onMouseOut={()=>setIsMouseOver(false)}
         />
